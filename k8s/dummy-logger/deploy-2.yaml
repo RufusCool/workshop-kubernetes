@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dummy-counter-v2
+spec:
+  containers:
+  - name: dummy-counter-v2
+    image: rampss/dummy-counter:v2

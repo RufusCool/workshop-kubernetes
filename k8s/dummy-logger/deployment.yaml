@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-counter-deployment
+  namespace: dummy-counter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dummy-counter-deployment
+  template:
+    metadata:
+      labels:
+        app: dummy-counter-deployment
+    spec:
+      containers:
+        - name: my-container-counter
+          image: rampss/dummy-counter:v2
